@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
   label,
   ...props
 }) => {
-  const baseButton = 'rounded-full font-bold hover:bg-opacity-75'
+  const baseButton = 'rounded-full font-bold hover:bg-opacity-75 transition-all duration-300'
   const sizeMode =
     size === 'small'
       ? 'py-1.5 px-4 text-xs'
