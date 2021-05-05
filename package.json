@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook -o build -s ./stories/assets",
+        "build-storybook": "build-storybook -o build -s ./components",
         "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
         "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
         "format": "prettier --write ."
