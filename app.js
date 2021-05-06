@@ -8,7 +8,7 @@ const app = protect(
   '/',
   (username, password) => safeCompare(username, USER_NAME) && safeCompare(password, PASSWORD), // timing attack 対策
   {
-    directory: `${__dirname}/`,
+    directory: `${__dirname}/out`, // out 配下のファイルを静的コンテンツとして配信する
     onAuthFailed: (res) => {
       res.end('Authentication failed')
     },
