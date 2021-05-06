@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           yarn install
-          yarn build
+          yarn build-export
           yarn build-storybook
       - uses: amondnet/vercel-action@v20
         with:
