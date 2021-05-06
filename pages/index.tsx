@@ -22,7 +22,7 @@ export default function Home() {
           primary
           size="medium"
         />
-        <p className="text-4xl text-yellow-500 font-bold">Hello Tailwind</p>
+        <p className="relative text-4xl font-bold text-yellow-500">Hello Tailwind</p>
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.js</code>
