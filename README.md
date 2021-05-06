@@ -3,6 +3,8 @@
 next.js+typescript+tailwindcss
 hosting with varcel
 
+huskyでpre-commitをhookにlintとフォーマットを通る
+
 ## app
 https://next-js-test-nine-lyart.vercel.app/
 
