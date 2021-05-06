@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { Button } from '../components/Button'
 
 export default function Home() {
   return (
@@ -13,6 +14,14 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <Button
+          label="Button"
+          onClick={function noRefCheck() {
+            alert('click')
+          }}
+          primary
+          size="medium"
+        />
         <p className="text-4xl text-yellow-500 font-bold">Hello Tailwind</p>
 
         <p className={styles.description}>
