@@ -13,7 +13,7 @@ jobs:
           ref: ${{ github.event.inputs.ref }}
       - uses: actions/setup-node@v2
         with:
-          node-version: "15"
+          node-version: '15'
       # 内容を更新するために yarn build を走らせる
       - name: Recreate app
         shell: bash
@@ -26,7 +26,7 @@ jobs:
           # GitHub Actions の Secrets で作成した値を参照する形で
           # Vercel デプロイ時に必要となる各種パラメタを設定する
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          vercel-args: "--prod" # Optional
+          vercel-args: '--prod' # Optional
           vercel-org-id: ${{ secrets.ORG_ID}} #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
           working-directory: ./
