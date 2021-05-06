@@ -9,6 +9,7 @@
         "start": "next start",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook -o storybook-static -s ./components",
+        "build-storybook-out": "build-storybook -o out/storybook -s ./components",
         "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
         "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
         "format": "prettier --write ."
