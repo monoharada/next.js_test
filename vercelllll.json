@@ -1,5 +1,4 @@
 {
-    "name": "next-js-test",
     "builds": [
         {
             "src": "app.js",
