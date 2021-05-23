@@ -27,16 +27,16 @@ export const Parametar = () => {
 
   const [count, setCount] = useState({ pwr: 0, spd: 0, int: 0, dex: 0 })
   const [result, setResult] = useState({ origin: 20, sum: 0 })
-  const paramObjkt = Object.values(count)
+  const paramsArray: number[] = Object.values(count)
 
-  const handleChange = (input) => (e) => {
-    if (e.target.value < 0) {
+  const handleChange = (input: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (Number(e.target.value) < 0) {
       return false
     }
     setCount({ ...count, [input]: e.target.value })
   }
   useEffect(() => {
-    const total = paramObjkt.reduce((prev, current) => {
+    const total = paramsArray.reduce((prev, current) => {
       return Number(prev) + Number(current)
     }, 0)
     setResult({ ...result, origin: 20 - total, sum: total })

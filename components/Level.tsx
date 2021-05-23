@@ -10,7 +10,7 @@ const Level = () => {
   useEffect(() => {
     const coefficient = 1 / 1.5
     setLevel(Math.round(exp * coefficient))
-  })
+  }, [exp])
   return (
     <div>
       <button onClick={getExp} className="p-2 bg-blue-300 rounded-full hover:bg-opacity-75">
