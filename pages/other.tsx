@@ -1,8 +1,32 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Button } from '../components/Button'
+// import { Button } from '../components/Button'
+import { useState, useEffect } from 'react'
+
+type ParamsProp = {
+  text: string
+  key: string
+  value: number
+}
 
 export default function Home() {
+  const params: ParamsProp[] = [
+    {
+      text: '力',
+      key: 'pwr',
+      value: 0,
+    },
+  ]
+
+  const [count, setCount] = useState({ pwr: 0 })
+
+  const handleChange = (input) => (e) => {
+    setCount({ ...count, [input]: e.target.value })
+  }
+  useEffect(() => {
+    const wip = 'wip'
+    return wip
+  })
   return (
     <div className={styles.container}>
       <Head>
@@ -14,26 +38,16 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Othre page</a>
         </h1>
-        <Button
-          label="Button"
-          onClick={function noRefCheck() {
-            alert('click')
-          }}
-          primary
-          size="medium"
-        />
-        <p className="text-4xl font-bold text-pink-500">Hello Tailwind</p>
-
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="/" className={styles.card}>
-            <h3>top page &rarr;</h3>
-            <p>go to top</p>
-          </a>
-        </div>
+        <ul>
+          {params.map((param, idx) => {
+            return (
+              <li key={idx}>
+                <label>{param.text}</label>
+                <input type="number" value={count[param.key]} onChange={handleChange(param.key)} />
+              </li>
+            )
+          })}
+        </ul>
       </main>
 
       <footer className={styles.footer}>
